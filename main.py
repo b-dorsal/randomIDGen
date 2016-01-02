@@ -1,4 +1,4 @@
-#Random Identity Creator
+#Random Identity Creator - Brian Dorsey - 2016
 #	Simply outputs a random first and last name, age, home US-state and gender that matched the name.
 #	Random.py: loads all data from files, formats data to look clean/uniform, chooses random data.
 #	Person.py: creates a Person object that stores that persons identity, used to easily create and manage many persons.

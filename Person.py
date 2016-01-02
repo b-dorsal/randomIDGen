@@ -1,4 +1,4 @@
-# Operation Description
+# Operation Description - Brian Dorsey - 2016
 #	Creates a person object with the fields...
 #		First Name
 #		Last Name

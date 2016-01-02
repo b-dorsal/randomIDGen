@@ -1,4 +1,4 @@
-# Operation Description
+# Operation Description - Brian Dorsey - 2016
 #	Loads files from directories.
 #	Formats each files data to appear clean and uniform.
 #	Produces a random value from each list.
