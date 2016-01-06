@@ -14,6 +14,7 @@
 #
 #
 #-----------------------------------------------------------------------------------------------------------------------
+import os.path		#for file existence checking.
 
 from Person import Person
 from Random import listsLoader
@@ -21,6 +22,33 @@ from Random import listsLoader
 rand = listsLoader('Data_Files/female_first_names.dat', 'Data_Files/male_first_names.dat', 'Data_Files/last_names.dat', 'Data_Files/home.dat')
 
 people = []
+
+
+def savePerson(pers, directory):
+	print "Saving ", pers.getName(), "'s data to ", directory
+	if os.path.isfile(directory): #if the file is found
+		print "File already exists, overwriting..."
+
+	files = open(directory, 'w')
+
+	text = "Name: " + pers.getName() + "\n"
+	temp = str(text)
+	files.write(temp)
+
+	text = "Gender: " + pers.getGender() + "\n"
+	temp = str(text)
+	files.write(temp)
+
+	text = "Age: " + pers.getGender() + "\n"
+	temp = str(text)
+	files.write(temp)
+
+	text = "Home: " + pers.getHomeState() + "\n"
+	temp = str(text)
+	files.write(temp)
+
+	files.close()
+
 
 #Creates 100 random Persons.
 for x in range(0, 100):
@@ -36,4 +64,6 @@ for y in range(0, 100):
 	print "Age: ", people[y].getAge()
 	print "Home: ", people[y].getHomeState()
 	print
+
+savePerson(people[99], "/Users/admin/Desktop/person.txt")
 

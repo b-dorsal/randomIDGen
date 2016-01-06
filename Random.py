@@ -3,7 +3,8 @@
 #	Formats each files data to appear clean and uniform.
 #	Produces a random value from each list.
 #----------------------------------------------------------------
-import random
+import random 		#for random number generation.
+import os.path		#for file existence checking.
 
 class listsLoader(object):
 
@@ -27,8 +28,25 @@ class listsLoader(object):
 	#open file, add each line to each nameList[] directory
 	def loadList(self, directory):
 		itemList = [] #list... array
-		with open(directory, 'r') as files:
-			itemList = files.readlines()
+		print "Opening File: ", directory
+
+		if os.path.isfile(directory): #if the file is found
+			print "Open Successful!"
+
+			with open(directory, 'r') as files:
+				print "Loading..."
+				itemList = files.readlines()
+
+			if not itemList: #if the list is empty after loading.
+				print "Error: File at", directory, "EMPTY, continuing with no data!"
+			else: #if it has any data.
+				print "Loading Complete."
+
+		else: # if the file is not found
+			print "Error: File at", directory, "NOT found, continuing with no data!"
+
+		print ""
+
 
 		return itemList
 
