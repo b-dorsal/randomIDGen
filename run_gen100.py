@@ -9,8 +9,10 @@
 #	This file creates 100 random 'Person' objects using data loaded from Random object 'rand'.
 #	After creation the identities are printed to the console.
 #
+#	Also can save a person's data to a text file [NOT FINISHED]
+#
 #	Known Issues:
-#		The male first names database file is currently 
+#		The male first names database file is currently unusable
 #
 #
 #-----------------------------------------------------------------------------------------------------------------------
